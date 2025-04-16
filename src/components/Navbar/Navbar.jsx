@@ -44,7 +44,7 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="flex justify-between items-center py-6 px-6 lg:px-[64px] bg-transparent fixed top-0 left-0 right-0 z-50">
+    <nav className="flex justify-between font-secondaryFont items-center py-6 px-6 lg:px-[64px] bg-transparent fixed top-0 left-0 right-0 z-50">
       {/* شعار الموقع */}
       <div>
         <img src={icon} alt="Logo" className="h-10" />
@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* زر القائمة (للشاشات الصغيرة) */}
       <button
-        className="md:hidden text-white z-50 focus:outline-none"
+        className="md:hidden text-white z-50 focus:outline-none cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -100,7 +100,7 @@ function NavLinks({ location, mobile = false, onNavigate = () => {} }) {
           to={link.path}
           onClick={onNavigate}
           className={`
-            ${mobile ? "py-4 text-xl border-b border-gray-700 w-full" : "pb-2"}
+            ${mobile ? "py-4 text-xl border-b-0 border-none w-full" : "pb-2"}
             text-white hover:border-b-2 hover:border-white transition-all
             ${location.pathname === link.path ? "border-b-2 border-white" : ""}
           `}

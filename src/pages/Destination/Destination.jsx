@@ -45,7 +45,7 @@ export default function Destination() {
 
   return (
     <div
-      className="min-h-screen text-white py-8 px-4 md:py-[48px] md:px-[165px] relative"
+      className="min-h-screen text-white py-8 px-4 md:py-[48px] md:px-[165px] overflow-hidden relative"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -54,11 +54,11 @@ export default function Destination() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-opacity-50 z-0"></div>
+      <div className="absolute inset-0 bg-opacity-50 z-0 overflow-hidden"></div>
 
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="text-xl md:text-2xl pt-[100px] mb-[24px] text-center md:text-left w-full">
-          <span className="text-gray-500 mr-4 text-[28px]">01</span> PICK YOUR
+        <h2 className="text-xl md:text-2xl pt-[100px] mb-[24px] font-secondaryFont text-center md:text-left w-full">
+          <span className="text-gray-500 mr-4 text-[28px] ">01</span> PICK YOUR
           DESTINATION
         </h2>
 
@@ -79,7 +79,7 @@ export default function Destination() {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`cursor-pointer text-[16px] uppercase  ${
+                  className={`cursor-pointer text-[16px] uppercase font-secondaryFont  ${
                     activeTab === index
                       ? "text-white border-b-2 border-white pb-1"
                       : "text-white"
@@ -91,21 +91,21 @@ export default function Destination() {
             </div>
 
             <div className="max-w-[90vw] md:max-w-[445px]">
-              <h3 className=" text-[32px] md:text-[96px] uppercase pt-[40px]">
+              <h3 className=" text-[32px] md:text-[96px] uppercase pt-[40px] font-primaryFont">
                 {DestinationData[activeTab].title}
               </h3>
-              <p className="text-[#D0D6F9] text-[18px] mt-[16px] border-b border-white/20 pb-[40px]">
+              <p className="text-[#D0D6F9] text-[18px] mt-[16px] border-b border-white/20 pb-[40px] font-tertiaryFont">
                 {DestinationData[activeTab].description}
               </p>
             </div>
             <div className="flex justify-between gap-6 pt-[40px]">
               <div>
-                <span className="text-[#D0D6F9] text-[14px]">AVG. DISTANCE</span>
-                <p className="text-[28px] uppercase pt-[12px]">{DestinationData[activeTab].distance}</p>
+                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">AVG. DISTANCE</span>
+                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">{DestinationData[activeTab].distance}</p>
               </div>
               <div>
-                <span className="text-[#D0D6F9] text-[14px]">EST. TRAVEL TIME</span>
-                <p className="text-[28px] uppercase pt-[12px]">{DestinationData[activeTab].time}</p>
+                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">EST. TRAVEL TIME</span>
+                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">{DestinationData[activeTab].time}</p>
               </div>
             </div>
           </div>

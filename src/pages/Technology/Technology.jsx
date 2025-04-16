@@ -46,13 +46,13 @@ export default function Technology() {
       <div className="absolute inset-0 bg-opacity-50 z-0"></div>
 
       <div className="relative z-10 flex flex-col  overflow-hidden">
-        <h2 className="text-xl md:text-2xl mt-[100px] text-center md:text-left w-full">
+        <h2 className="text-xl md:text-2xl mt-[100px] text-center md:text-left w-full font-secondaryFont">
           <span className="text-gray-500 mr-4 text-[28px]">03</span> SPACE LAUNCH 101
         </h2>
 
         <div className="flex flex-col items-center  gap-8 lg:flex-row w-full mt-8">
           {/* التنقل العمودي */}
-          <div className="flex lg:flex-col space-x-4 lg:space-x-0 gap-8 justify-center lg:justify-start mb-8 lg:mb-0 lg:mr-8">
+          <div className="flex lg:flex-col space-x-4 lg:space-x-0 gap-8 justify-center lg:justify-start mb-8 lg:mb-0 lg:mr-8 font-primaryFont">
             {techData.map((_, index) => (
               <button
                 key={index}
@@ -63,7 +63,7 @@ export default function Technology() {
                     : "bg-transparent text-white border-white/25 hover:border-white"
                 }`}
               >
-                <span className="text-[20px] font-bold">{index + 1}</span>
+                <span className="text-[32px]">{index + 1}</span>
               </button>
             ))}
           </div>
@@ -71,13 +71,13 @@ export default function Technology() {
           {/* النص */}
           <div className="flex flex-col items-center lg:items-baseline lg:justify-evenly text-center lg:text-left">
             <div className="max-w-[90vw] md:max-w-[491px]">
-              <h3 className="text-gray-400 text-[32px]  uppercase ">
+              <h3 className="text-gray-400 text-[32px]  uppercase font-primaryFont">
                 {techData[activeTab].title}
               </h3>
-              <h1 className="text-[24px] md:text-[40px] lg:text-[56px] mt-4 mb-6 font-normal uppercase">
+              <h1 className="text-[24px] md:text-[40px] lg:text-[56px] mt-4 mb-6 font-normal uppercase font-primaryFont">
                 {techData[activeTab].name}
               </h1>
-              <p className="text-[#D0D6F9] text-[18px]">
+              <p className="text-[#D0D6F9] text-[18px] font-tertiaryFont">
                 {techData[activeTab].description}
               </p>
             </div>

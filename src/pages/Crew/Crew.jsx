@@ -50,10 +50,10 @@ export default function Crew() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-opacity-50 z-0"></div>
+      <div className="absolute inset-0 bg-opacity-50 z-0 overflow-hidden"></div>
 
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="text-xl md:text-2xl mt-[100px] text-center  md:text-left w-full">
+        <h2 className="text-xl md:text-2xl mt-[100px] text-center  md:text-left w-full font-secondaryFont">
           <span className="text-gray-500 mr-4 text-[28px]">02</span> MEET YOUR CREW
         </h2>
 
@@ -61,13 +61,13 @@ export default function Crew() {
           {/* النص والتنقل */}
           <div className="flex flex-col items-center lg:items-baseline lg:justify-evenly text-center lg:text-left">
             <div className="max-w-[90vw] md:max-w-[539px]">
-              <h3 className="text-gray-400 text-[32px] md:text-xl uppercase mt-4">
+              <h3 className="text-gray-400 text-[32px] md:text-xl uppercase mt-4 font-primaryFont">
                 {crewData[activeTab].title}
               </h3>
-              <h1 className="text-[24px] md:text-[40px] lg:text-[56px] my-4 font-normal uppercase">
+              <h1 className="text-[24px] md:text-[40px] lg:text-[56px] my-4 font-normal uppercase font-primaryFont">
                 {crewData[activeTab].name}
               </h1>
-              <p className="text-[#D0D6F9] text-[18px]">
+              <p className="text-[#D0D6F9] text-[18px] font-tertiaryFont">
                 {crewData[activeTab].description}
               </p>
             </div>
