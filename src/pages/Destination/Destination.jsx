@@ -57,13 +57,11 @@ export default function Destination() {
       <div className="absolute inset-0 bg-opacity-50 z-0 overflow-hidden"></div>
 
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="text-xl md:text-2xl pt-[100px] mb-[24px] font-secondaryFont text-center md:text-left w-full">
-          <span className="text-gray-500 mr-4 text-[28px] ">01</span> PICK YOUR
-          DESTINATION
+        <h2 className="md:mx-[40px] mx-0 mt-[110px] mb-[24px] font-secondaryFont text-center md:text-left w-full lg:text-[28px] md:text-[20px] text-[16px]">
+          <span className="text-gray-500 mr-4 ">01</span> PICK YOUR DESTINATION
         </h2>
 
         <div className="flex flex-col lg:flex-row w-full mt-8 gap-8">
-          {/* الصورة */}
           <div className="flex justify-center w-full lg:w-auto px-[29.5px] lg:py-[127px] py-[42px]">
             <img
               src={DestinationData[activeTab].image}
@@ -79,7 +77,7 @@ export default function Destination() {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`cursor-pointer text-[16px] uppercase font-secondaryFont  ${
+                  className={`cursor-pointer md:text-[16px] text-[14px] uppercase font-secondaryFont  ${
                     activeTab === index
                       ? "text-white border-b-2 border-white pb-1"
                       : "text-white"
@@ -91,21 +89,29 @@ export default function Destination() {
             </div>
 
             <div className="max-w-[90vw] md:max-w-[445px]">
-              <h3 className=" text-[32px] md:text-[96px] uppercase pt-[40px] font-primaryFont">
+              <h3 className=" text-[56px] lg:text-[96px] mg:text-[80px] uppercase pt-[40px] font-primaryFont">
                 {DestinationData[activeTab].title}
               </h3>
-              <p className="text-[#D0D6F9] text-[18px] mt-[16px] border-b border-white/20 pb-[40px] font-tertiaryFont">
+              <p className="text-[#D0D6F9] lg:text-[18px] md:text-[16px] text-[15px] mt-[16px] border-b border-white/20 pb-[40px] font-tertiaryFont">
                 {DestinationData[activeTab].description}
               </p>
             </div>
-            <div className="flex justify-between gap-6 pt-[40px]">
+            <div className="flex justify-between flex-col md:flex-row gap-6 pt-[40px]">
               <div>
-                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">AVG. DISTANCE</span>
-                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">{DestinationData[activeTab].distance}</p>
+                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">
+                  AVG. DISTANCE
+                </span>
+                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">
+                  {DestinationData[activeTab].distance}
+                </p>
               </div>
               <div>
-                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">EST. TRAVEL TIME</span>
-                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">{DestinationData[activeTab].time}</p>
+                <span className="text-[#D0D6F9] text-[14px] font-secondaryFont">
+                  EST. TRAVEL TIME
+                </span>
+                <p className="text-[28px] uppercase pt-[12px] font-primaryFont">
+                  {DestinationData[activeTab].time}
+                </p>
               </div>
             </div>
           </div>

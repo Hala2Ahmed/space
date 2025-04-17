@@ -5,7 +5,6 @@ import techImg3 from "../../assets/Bitmap (1).png";
 import backgroundImage from "../../assets/main-img3.jpeg";
 
 export default function Technology() {
-    
   const [activeTab, setActiveTab] = useState(0);
 
   const techData = [
@@ -46,8 +45,8 @@ export default function Technology() {
       <div className="absolute inset-0 bg-opacity-50 z-0"></div>
 
       <div className="relative z-10 flex flex-col  overflow-hidden">
-        <h2 className="text-xl md:text-2xl mt-[100px] text-center md:text-left w-full font-secondaryFont">
-          <span className="text-gray-500 mr-4 text-[28px]">03</span> SPACE LAUNCH 101
+        <h2 className="md:mx-[40px] mx-0 mt-[110px] text-center md:text-left w-full font-secondaryFont lg:text-[28px] md:text-[20px] text-[16px]">
+          <span className="text-gray-500 mr-4">03</span> SPACE LAUNCH 101
         </h2>
 
         <div className="flex flex-col items-center  gap-8 lg:flex-row w-full mt-8">
@@ -57,33 +56,33 @@ export default function Technology() {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`cursor-pointer flex items-center justify-center w-[80px] h-[80px] rounded-full border transition-colors ${
+                className={`cursor-pointer flex items-center justify-center lg:w-[80px] lg:h-[80px] md:w-[56px] md:h-[56px] w-[40px] h-[40px] rounded-full border transition-colors ${
                   activeTab === index
                     ? "bg-white text-black"
                     : "bg-transparent text-white border-white/25 hover:border-white"
                 }`}
               >
-                <span className="text-[32px]">{index + 1}</span>
+                <span className="lg:text-[32px] md:text-[24px] text-[18px]">
+                  {index + 1}
+                </span>
               </button>
             ))}
           </div>
 
-          {/* النص */}
           <div className="flex flex-col items-center lg:items-baseline lg:justify-evenly text-center lg:text-left">
             <div className="max-w-[90vw] md:max-w-[491px]">
-              <h3 className="text-gray-400 text-[32px]  uppercase font-primaryFont">
+              <h3 className="text-gray-400 lg:text-[32px] md:text-[24px] text-[18px]  uppercase font-primaryFont">
                 {techData[activeTab].title}
               </h3>
               <h1 className="text-[24px] md:text-[40px] lg:text-[56px] mt-4 mb-6 font-normal uppercase font-primaryFont">
                 {techData[activeTab].name}
               </h1>
-              <p className="text-[#D0D6F9] text-[18px] font-tertiaryFont">
+              <p className="text-[#D0D6F9] lg:text-[18px] md:text-[16px] text-[15px] font-tertiaryFont">
                 {techData[activeTab].description}
               </p>
             </div>
           </div>
 
-          {/* الصورة */}
           <div className="mt-[67px] order-first lg:order-last">
             <img
               src={techData[activeTab].image}

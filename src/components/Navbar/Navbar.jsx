@@ -6,7 +6,6 @@ export default function Navbar() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  // SVG للقائمة (Hamburger icon)
   const MenuIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +24,6 @@ export default function Navbar() {
     </svg>
   );
 
-  // SVG لأيقونة الإغلاق (X icon)
   const CloseIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +43,6 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between font-secondaryFont items-center py-6 px-6 lg:px-[64px] bg-transparent fixed top-0 left-0 right-0 z-50">
-      {/* شعار الموقع */}
       <div>
         <img src={icon} alt="Logo" className="h-10" />
       </div>
@@ -83,7 +80,6 @@ export default function Navbar() {
   );
 }
 
-// مكون مساعد لروابط التنقل
 function NavLinks({ location, mobile = false, onNavigate = () => {} }) {
   const links = [
     { path: "/", number: "00", text: "HOME" },

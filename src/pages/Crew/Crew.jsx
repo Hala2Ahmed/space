@@ -53,21 +53,20 @@ export default function Crew() {
       <div className="absolute inset-0 bg-opacity-50 z-0 overflow-hidden"></div>
 
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="text-xl md:text-2xl mt-[100px] text-center  md:text-left w-full font-secondaryFont">
-          <span className="text-gray-500 mr-4 text-[28px]">02</span> MEET YOUR CREW
+        <h2 className="md:mx-[40px] mx-0 mt-[110px] text-center  md:text-left w-full font-secondaryFont lg:text-[28px] md:text-[20px] text-[16px]">
+          <span className="text-gray-500 mr-4">02</span> MEET YOUR CREW
         </h2>
 
         <div className="flex flex-col lg:flex-row  w-full mt-8">
-          {/* النص والتنقل */}
           <div className="flex flex-col items-center lg:items-baseline lg:justify-evenly text-center lg:text-left">
             <div className="max-w-[90vw] md:max-w-[539px]">
-              <h3 className="text-gray-400 text-[32px] md:text-xl uppercase mt-4 font-primaryFont">
+              <h3 className="text-gray-400 lg:text-[32px] md:text-[24px] text-[18px] uppercase mt-4 font-primaryFont">
                 {crewData[activeTab].title}
               </h3>
               <h1 className="text-[24px] md:text-[40px] lg:text-[56px] my-4 font-normal uppercase font-primaryFont">
                 {crewData[activeTab].name}
               </h1>
-              <p className="text-[#D0D6F9] text-[18px] font-tertiaryFont">
+              <p className="text-[#D0D6F9] lg:text-[18px] md:text-[16px] text-[15px] font-tertiaryFont">
                 {crewData[activeTab].description}
               </p>
             </div>
@@ -87,7 +86,6 @@ export default function Crew() {
             </div>
           </div>
 
-          {/* الصورة */}
           <div className=" flex justify-center w-full lg:w-auto">
             <img
               src={crewData[activeTab].image}
